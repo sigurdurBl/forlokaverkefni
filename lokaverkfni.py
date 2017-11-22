@@ -9,6 +9,7 @@ class Viðskiptavinur:
         self.simi = simi
         self.postur = postur
 
+
 class gerdBills:
     def __init__(self,framledari,skranr,tegund,leyfilegurfjoldimanna):
         self.framledari = framledari
@@ -16,17 +17,24 @@ class gerdBills:
         self.tegund = tegund
         self.leyfilegurfjoldimanna = leyfilegurfjoldimanna
 
+
 class bill:
-    def __init__(self,skranr,argerd,tegund,ath):
+    def __init__(self,skranr,argerd,tegund,framledari,ath):
         self.skranr = skranr
         self.argerd = argerd
         self.tegund = tegund
+        self.framledari = framledari
         self.ath = ath
+
+
 class pantanair:
     def __init__(self,audkenni,vidskiptavinir,pontunardagur,ath):
         self.audkenni = audkenni
         self.vidskiptavinir = vidskiptavinir
         self.pontunardagur = pontunardagur
         self.ath = ath
+
+
+
 
 
