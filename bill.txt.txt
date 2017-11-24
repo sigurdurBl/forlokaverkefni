@@ -1,5 +1,0 @@
-["ASd23","1992","folksbill","Honda","Svartur bill med 120 hp"]
-["AAA99","2000","jeppi","Toyota","Grar bill med 180 hp"]
-["pfg29","1989","folksbill","Nissan","Gulur bill med 80 hp"]
-["AGd25","2008","jeep","Jeep","Svartur bill med 300 hp"]
-["sad69","2000","sportsbill","Honda","Raudur bill med 170 hp"]
