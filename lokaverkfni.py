@@ -1,5 +1,5 @@
 
-class Viðskiptavinur:
+class Vidskiptavinur:
     def __init__(self,nafn,heimili,kt,þjoderni,okt,simi,postur):
         self.nafn = nafn
         self.hemili = heimili
@@ -8,6 +8,20 @@ class Viðskiptavinur:
         self.okt = okt
         self.simi = simi
         self.postur = postur
+
+    def readVIdskiftavindur(self):
+        vidskipavinur = []
+        lina = ""
+        with open("vidskiftavinur.txt", "r") as bill1:
+            lina = bill1.read()
+            vinur = lina.split(":")
+            vinur.remove("")
+        print(vinur)
+        vinurtemp = []
+        for x in vinur:
+            vinurtemp = x.split(",")
+        return vinurtemp
+
 
 
 class gerdBills:
@@ -26,6 +40,33 @@ class bill:
         self.framledari = framledari
         self.ath = ath
 
+    def readFile(self):
+        val = input("hvað ertu að leita af")
+        # val = "\"" + val + "\""
+        bilar = []
+        lina = ""
+        with open("bill.txt", "r") as bill1:
+            lina = bill1.read()
+            bilar = lina.split(":")
+            bilar.remove("")
+            # bilar=lina.split(",")
+        print(bilar)
+        temp = []
+        for x in bilar:
+            temp = x.split(",")
+
+            print(val)
+            # print(temp[2])
+            temp[2] = temp[2][1:-1]
+            print("verður svona", temp[2])
+            if val == temp[2]:
+                print(temp)
+                # print(temp[2])
+                # for lin in bilar:
+                # print(lin)
+
+        return temp
+
 
 
 class pantanair:
@@ -34,39 +75,6 @@ class pantanair:
         self.vidskiptavinir = vidskiptavinir
         self.pontunardagur = pontunardagur
         self.ath = ath
-def readFile(skra):
-    bilar = []
-    with open(skra,"r") as bill1:
-        lina=bill1.read()
 
-        for line in bill1:
-            #line.r
-            bilar.append(line)
-
-    return bilar
-
-
-
-val = input("hvað ertu að leita af")
-#val = "\"" + val + "\""
-bilar = []
-lina=""
-with open("bill.txt","r") as bill1:
-    lina=bill1.read()
-    bilar=lina.split(":")
-    bilar.remove("")
-    #bilar=lina.split(",")
-print(bilar)
-temp=[]
-for x in bilar:
-    temp = x.split(",")
-
-    print(val)
-    #print(temp[2])
-    temp[2]=temp[2][1:-1]
-    print("verður svona",temp[2])
-    if val==temp[2]:
-        print(temp)
-    #print(temp[2])
-    #for lin in bilar:
-       #print(lin)
+print(Vidskiptavinur("","","","","","","").readVIdskiftavindur())
+print(bill("","","","","").readFile())
