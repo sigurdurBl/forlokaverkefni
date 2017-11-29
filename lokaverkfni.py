@@ -76,6 +76,22 @@ class pantanair:
         self.vidskiptavinir = vidskiptavinir
         self.pontunardagur = pontunardagur
         self.ath = ath
+    def readpantanair(self):
+        pantanir = []
+        lina = ""
+
+        with open("pontun.txt", "r") as pontun1:
+            lina = pontun1.read().splitlines()
+            # print(lina)
+            for x in lina:
+                pantanir.append(x.split(","))
+                # vidskipavinur.remove("")
+                # print(vidskipavinur)
+        for x in pantanir:
+            print(x)
+            print(x[0])
+
 
 print(Vidskiptavinur("","","","","","","").readVIdskiftavindur())
 print(bill("","","","","","").readFile())
+print(pantanair("","","","").readpantanair())

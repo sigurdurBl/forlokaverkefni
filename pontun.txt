@@ -1,0 +1,5 @@
+1307773255,Johann Fjallarson,20.11.2010,Svartann Bandarískann jeppa
+1407770213,Gudmundur Fjallarson,11.11.2011,Graann Kanadiskann jeppa
+1507770865,Johannes Fjallarson,29.11.2011,Gulan Asiskan jeppa
+1607771244,Sigurdur Fjallarson,14.11.2011,Raudann Japanskann jeppa
+1707773641,Thorur Fjallarson,13.11.2011,Svartann Bandarískann jeppa
