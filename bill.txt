@@ -1,5 +1,5 @@
-["ASd23","1992","folksbill","Honda","Svartur bill med 120 hp","4 sæti"]:
-["AAA99","2000","jeppi","Toyota","Grar bill med 180 hp","8 sæti"]:
-["pfg29","1989","folksbill","Nissan","Gulur bill med 80 hp","5 sæti"]:
-["AGd25","2008","jeppi","Jeep","Svartur bill med 300 hp","6 sæti"]:
-["sad69","2000","sportsbill","Honda","Raudur bill med 170 hp","2 sæti"]:
+["ASd23","1992","folksbill","Honda","Svartur bill med 120 hp","4 saeti"]:
+["AAA99","2000","jeppi","Toyota","Grar bill med 180 hp","8 saeti"]:
+["pfg29","1989","folksbill","Nissan","Gulur bill med 80 hp","5 saeti"]:
+["AGd25","2008","jeppi","Jeep","Svartur bill med 300 hp","6 saeti"]:
+["sad69","2000","sportsbill","Honda","Raudur bill med 170 hp","2 saeti"]:
