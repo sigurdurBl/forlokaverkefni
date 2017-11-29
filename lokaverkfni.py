@@ -24,21 +24,14 @@ class Vidskiptavinur:
 
 
 
-class gerdBills:
-    def __init__(self,framledari,skranr,tegund,leyfilegurfjoldimanna):
-        self.framledari = framledari
-        self.skranr = skranr
-        self.tegund = tegund
-        self.leyfilegurfjoldimanna = leyfilegurfjoldimanna
-
-
 class bill:
-    def __init__(self,skranr,argerd,tegund,framledari,ath):
+    def __init__(self,skranr,argerd,tegund,framledari,ath,leyfilegurfjoldimanna):
         self.skranr = skranr
         self.argerd = argerd
         self.tegund = tegund
         self.framledari = framledari
         self.ath = ath
+        self.leyfilegurfjoldimanna = leyfilegurfjoldimanna
 
     def readFile(self):
         val = input("hvað ertu að leita af")
@@ -77,4 +70,4 @@ class pantanair:
         self.ath = ath
 
 print(Vidskiptavinur("","","","","","","").readVIdskiftavindur())
-print(bill("","","","","").readFile())
+print(bill("","","","","","").readFile())
