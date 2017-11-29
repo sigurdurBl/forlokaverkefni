@@ -12,16 +12,24 @@ class Vidskiptavinur:
     def readVIdskiftavindur(self):
         vidskipavinur = []
         lina = ""
+
         with open("vidskiftavinur.txt", "r") as bill1:
-            lina = bill1.read()
-            vinur = lina.split(":")
-            vinur.remove("")
-        print(vinur)
+            lina = bill1.read().splitlines()
+            #print(lina)
+            for x in lina:
+                vidskipavinur.append(x.split(","))
+            #vidskipavinur.remove("")
+       # print(vidskipavinur)
+        for x in vidskipavinur:
+            print(x)
+            print(x[0])
+
+'''
         vinurtemp = []
-        for x in vinur:
+        for x in vidskipavinur:
             vinurtemp = x.split(",")
         return vinurtemp
-
+'''
 
 
 class bill:
@@ -58,7 +66,7 @@ class bill:
                 # for lin in bilar:
                 # print(lin)
 
-        return temp
+        #return temp
 
 
 

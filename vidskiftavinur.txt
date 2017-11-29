@@ -1,5 +1,5 @@
-["Þórdís","Nedstasund 3","1302891236","isl","38405892","2323053","thordis@gaymail.com"]:
-["Tómas","Saevidarsund 42","1605941284","isl","23720568","0123423","tommicoolkid@gmail.com"]:
-["Brynja","Bollagata 2","0101824523","isl","99234563","6961922","brynja101lol@hotmail.com"]:
-["Jakub","Nokkvavogur13","0202991239","isl","332102356","6661964","jakubforthewin@hotmail.com"]:
-["Siggi mememaster","Efstasund 45","6969996969","Rus","01013462","7676923",""siggicoolboi0111@hotmail.com"]:
+Þórdís,Nedstasund 3,1302891236,isl,38405892,2323053,thordis@gaymail.com
+Tómas,Saevidarsund 42,1605941284,isl,23720568,0123423,tommicoolkid@gmail.com
+Brynja,Bollagata 2,"0101824523,"isl,99234563,6961922,brynja101lol@hotmail.com
+Jakub,Nokkvavogur13","0202991239,isl,332102356","6661964,jakubforthewin@hotmail.com
+Siggi mememaster,Efstasund 45,6969996969","Rus,01013462",7676923,siggicoolboi0111@hotmail.com
