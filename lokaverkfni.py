@@ -41,7 +41,7 @@ class bill:
         self.leyfilegurfjoldimanna = leyfilegurfjoldimanna
 
     def readFile(self):
-        val = input("hvað ertu að leita af")
+        val = input("hvernig bíl ertu að leita af jeppi sportsbill eða folksbill")
         # val = "\"" + val + "\""
         bilar = []
         lina = ""
@@ -89,10 +89,41 @@ class pantanair:
         for x in pantanir:
             print(x)
             print(x[0])
+class bilalegia:
 
+    def readbilalega(self,val):
+        val = input("hvaða bíl ertu að leita af")
+        my_dict = {}
+        with open("bilaleiga.txt","r") as bilalegan:
+            linur = bilalegan.read()
+            print(linur)
+            my_dict=eval(linur)
 
+        for k,v in my_dict.items():
+            if val == k:
+                print(k,"er í leigu")
+            #print(k,v)
 
+svar = "N"
+while svar == "N":
+    print("1 = Prenta út Vidskiptavinur:")
+    print("2 = Prenta út Bíll:")
+    print("3 = Prenta út Pantanair:")
+    print("4 = Prenta út Bílaleiga:")
+    print("% = Hætta í Forriti:")
+    v = int(input("hvað vilt þú velja?:"))
 
-print(Vidskiptavinur("","","","","","","").readVIdskiftavindur())
-print(bill("","","","","","").readFile())
-print(pantanair("","","","").readpantanair())
+    if v == 1:
+        a = Vidskiptavinur("","","","","","","")
+        print(a.readVIdskiftavindur())
+    if v == 2:
+        b = bill("","","","","","")
+        print(b.readFile())
+
+    if v == 3:
+        p = pantanair("","","","")
+        print(p.readpantanair())
+
+    if v == 4:
+        bl = bilalegia()
+        print(bl.readbilalega(""))
