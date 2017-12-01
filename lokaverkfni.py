@@ -91,6 +91,8 @@ class pantanair:
             print(x[0])
 
 
+
+
 print(Vidskiptavinur("","","","","","","").readVIdskiftavindur())
 print(bill("","","","","","").readFile())
 print(pantanair("","","","").readpantanair())
