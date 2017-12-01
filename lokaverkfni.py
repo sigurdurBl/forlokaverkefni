@@ -1,4 +1,7 @@
+#Sigurður Aron Blöndal, Þórður Jónatansson
+#Lokaverkefni forritunar.
 
+#Klasssi fyrir viðskifta vininn
 class Vidskiptavinur:
     def __init__(self,nafn,heimili,kt,þjoderni,okt,simi,postur):
         self.nafn = nafn
@@ -14,21 +17,13 @@ class Vidskiptavinur:
 
         with open("vidskiftavinur.txt", "r") as bill1:
             lina = bill1.read().splitlines()
-            #print(lina)
+
             for x in lina:
                 vidskipavinur.append(x.split(","))
-            #vidskipavinur.remove("")
-       # print(vidskipavinur)
+
         for x in vidskipavinur:
             print(x)
             print(x[0])
-
-'''
-        vinurtemp = []
-        for x in vidskipavinur:
-            vinurtemp = x.split(",")
-        return vinurtemp
-'''
 
 
 class bill:
@@ -42,7 +37,7 @@ class bill:
 
     def readFile(self):
         val = input("hvernig bíl ertu að leita af jeppi sportsbill eða folksbill")
-        # val = "\"" + val + "\""
+
         bilar = []
         lina = ""
         with open("bill.txt", "r") as bill1:
@@ -68,7 +63,7 @@ class bill:
         #return temp
 
 
-
+#Klassi fyrir pantanir
 class pantanair:
     def __init__(self,audkenni,vidskiptavinir,pontunardagur,ath):
         self.audkenni = audkenni
@@ -89,6 +84,8 @@ class pantanair:
         for x in pantanir:
             print(x)
             print(x[0])
+
+#Klassi fyrir bilaleigu
 class bilalegia:
 
     def readbilalega(self,val):
@@ -106,24 +103,40 @@ class bilalegia:
 
 svar = "N"
 while svar == "N":
-    print("1 = Prenta út Vidskiptavinur:")
-    print("2 = Prenta út Bíll:")
-    print("3 = Prenta út Pantanair:")
-    print("4 = Prenta út Bílaleiga:")
-    print("% = Hætta í Forriti:")
-    v = int(input("hvað vilt þú velja?:"))
+    print("1 = Prenta út Vidskiptavinur :")
+    print("2 = Prenta út Bíll :")
+    print("3 = Prenta út Pantanair :")
+    print("4 = Prenta út Bílaleiga :")
+    print("% = Hætta í Forriti :")
+    v = int(input("hvað vilt þú velja ? :"))
 
     if v == 1:
+        print("Þú hefur valið að Prenta út Vidskiptavini.")
         a = Vidskiptavinur("","","","","","","")
         print(a.readVIdskiftavindur())
     if v == 2:
+        print("Þú hefur valið að Prenta út Bíla.")
         b = bill("","","","","","")
         print(b.readFile())
 
     if v == 3:
+        print("Þú hefur valið að Prenta út Pantanair.")
         p = pantanair("","","","")
         print(p.readpantanair())
 
     if v == 4:
+        print("Þú hefur valið að Prenta út Bílaleigu.")
         bl = bilalegia()
         print(bl.readbilalega(""))
+
+    if v == 5:
+        input("vilt þú hætta Y/N")
+        if input =="Y":
+            break
+        else:
+            print("1 = Prenta út Vidskiptavinur :")
+            print("2 = Prenta út Bíll :")
+            print("3 = Prenta út Pantanair :")
+            print("4 = Prenta út Bílaleiga :")
+            print("% = Hætta í Forriti :")
+            v = int(input("hvað vilt þú velja ? :"))
