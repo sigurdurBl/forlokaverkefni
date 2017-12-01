@@ -11,7 +11,6 @@ class Vidskiptavinur:
 
     def readVIdskiftavindur(self):
         vidskipavinur = []
-        lina = ""
 
         with open("vidskiftavinur.txt", "r") as bill1:
             lina = bill1.read().splitlines()
