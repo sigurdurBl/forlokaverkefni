@@ -21,9 +21,11 @@ class Vidskiptavinur:
             for x in lina:
                 vidskipavinur.append(x.split(","))
 
-        for x in vidskipavinur:
-            print(x)
-            print(x[0])
+        for madur in vidskipavinur:
+            for x in madur:
+                print(x,end="  ")
+            print()
+           # print(x[0])
 
 
 class bill:
@@ -90,17 +92,32 @@ class pantanair:
 #Klassi fyrir bilaleigu
 class bilalegia:
     #þetta fall les texta skrá sem heldur um uplýsingar um bílaleigu fyrir bíla
-    def readbilalega(self,val):
+    def readbilalega(self,val,val2):
         val = input("hvaða bíl ertu að leita af")
+        val2 = input("hvaða viku vilt þú leigja")
         my_dict = {}
+
         with open("bilaleiga.txt","r") as bilalegan:
             linur = bilalegan.read()
             print(linur)
             my_dict=eval(linur)
+            print(my_dict)
+            for k,v in my_dict.items():
+                if val == k and val2 == v:
+                    print(k,"er í leigu í viku :",v)
+                elif val == k and val2 != v:
+                    my_dict[val] = val2
+                    print("þú valdir að leigja bílin :",val,"og í viku :",val2)
+                    with open("bilalegiga.txt","w") as bilalegan:
+                        bilalegan.write(str(my_dict))
+                    with open("bilaleiga.txt","r") as bilalegan:
+                        read = bilalegan.read()
+                        print(read)
 
-        for k,v in my_dict.items():
-            if val == k:
-                print(k,"er í leigu í viku",v)
+
+
+                else:
+                    print("Bíll ekkið til :(")
             #print(k,v)
 
 svar = "N"
@@ -109,7 +126,8 @@ while svar == "N":
     print("2 = Prenta út Bíll :")
     print("3 = Prenta út Pantanair :")
     print("4 = Prenta út Bílaleiga :")
-    print("5 = Hætta í Forriti :")
+    print("5 = leiga bíl :")
+    print("6 = Hætta í Forriti :")
     v = int(input("hvað vilt þú velja ? :"))
 
     if v == 1:
@@ -129,9 +147,9 @@ while svar == "N":
     if v == 4:
         print("Þú hefur valið að Prenta út Bílaleigu.")
         bl = bilalegia()
-        print(bl.readbilalega(""))
+        print(bl.readbilalega("",""))
 
-    if v == 5:
+    if v == 6:
         svar = input("vilt þú hætta? Y/N")
 
 
